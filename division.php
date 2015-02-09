@@ -8,6 +8,9 @@
 
 	function divide($x, $y)
 	{
+		if ($y == 0)
+		{
+			$y = $x;}
 		return $x / $y;
 	}
 

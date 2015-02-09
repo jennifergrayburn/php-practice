@@ -3,9 +3,40 @@
 	<title>Time traveler</title>
 </head>
 
+
 <body>	
 	<p><?php
 
+$tests = [1823, 1995, 3043];
+
+/**
+*Test if a year is from the past, present or future
+*/
+function test_year($year)
+{
+
+	$value = "nope";
+
+	if($year < 1990){
+		$value = "something";
+	} elseif ($year <=2020){
+		$value = "something else";
+} else {
+		$value = "even something else";
+}
+	return $value;
+}
+
+echo test_year(1823);
+echo test_year(1995);
+echo test_year(3043);
+
+/**
+*another option I tried below each below
+*/
+?>
+
+<p><?php
 	$yearorigin = 1823;
 	
 switch($yearorigin) {
