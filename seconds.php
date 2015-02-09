@@ -1,23 +1,23 @@
 <html>
 <head>
-	<title>Time Travel</title>
+	<title>Seconds to Years</title>
 </head>
 
 <body>	
 	<?php
 
-function divide($x, $y)
+	function divide($seconds, $conversion)
 	{
-		return $x / $y;
+		return $seconds / $conversion;
 	}
 
 	$seconds = array("600000000", "60", "40000.33");
-	$sum = 0; 
-	
-	foreach ($seconds as $second) {
-		$sum += $second / 60 / 60 / 24 / 365;
-		echo "$second seconds is $sum years.<br/>";
-}
 
+	foreach($seconds as $second){
+		$years = divide($second, 31536000);
+		echo "$second seconds is $years years.</br>";
+	}
+
+	 
 
 	?>
